@@ -6,17 +6,11 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:src="@drawable/ic_launcher_background"
-        android:layout_weight="1"
-        android:contentDescription="@string/todo" />
-
     <Button
-        android:id="@+id/button"
+        android:id="@+id/main_load_picture"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="@string/load_picture" />
+        android:layout_height="wrap_content"
+        android:text="加载图片"/>
+
+
 </LinearLayout>
