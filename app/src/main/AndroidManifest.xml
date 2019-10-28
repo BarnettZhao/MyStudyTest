@@ -23,6 +23,7 @@
         </activity>
 
         <activity android:name=".LoadPictureActivity"/>
+        <activity android:name=".InputPasswordActivity"/>
     </application>
 
 </manifest>

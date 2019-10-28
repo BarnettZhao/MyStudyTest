@@ -29,12 +29,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         loadPicture.setOnClickListener(this);
         Button netRequest = findViewById(R.id.main_net_request);
         netRequest.setOnClickListener(this);
+        Button inputPassword = findViewById(R.id.main_password_input);
+        inputPassword.setOnClickListener(this);
     }
 
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.main_password_input:
+                startActivity(new Intent(MainActivity.this, InputPasswordActivity.class));
+                break;
             case R.id.main_load_picture:
                 Intent loadPictureIntent = new Intent(MainActivity.this, LoadPictureActivity.class);
                 startActivity(loadPictureIntent);
@@ -54,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onSuccess(Response response) {
                         //请求成功，数据解析。。。
-                        Toast.makeText(getApplicationContext(),response.toString(),Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
                     }
 
                     @Override
